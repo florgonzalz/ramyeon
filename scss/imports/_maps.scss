@@ -1,0 +1,7 @@
+@import './variables';
+
+@each $pregunta, $color in $fondo {
+    .#{$pregunta}{
+            background-color: $color;
+    }
+}

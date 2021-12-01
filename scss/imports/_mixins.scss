@@ -1,0 +1,10 @@
+@import './variables';
+
+@mixin respuestas ($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+}
+
+.fondo-respuesta{
+    @include respuestas (30%, 100%)
+}
