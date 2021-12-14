@@ -1,0 +1,142 @@
+@media screen and (max-width:480px) {
+
+    /* HEADER */
+
+    .header {
+        .header__logo {
+            width: 14vw;
+            display: none;
+            // img {
+            //     width: 100%;
+            // }
+        }
+
+        .header__nav {
+            width: 100vw;
+            > ul {
+                padding: 0;
+                justify-content: space-around;
+                > li {
+                    width: 15vw;
+                }
+            }
+        }
+    }
+
+
+
+    /* Carrousel */
+
+    #carouselExampleIndicators .carousel-inner .carousel-item div h3{
+        font-size: $font-size;
+    }
+
+    /* Main */
+
+    main {
+        .section {
+            .section__menu {
+                width: 100vw;
+                .section__grilla {
+                    flex-direction: column;
+                    width: 100%;
+                    .section__img {
+                        width: 90%;
+                        height: 300px;
+                        margin: 0 auto;
+                    }
+                    .section__haches {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .section__boton {
+            .boton {
+                width: 30vw;
+            }
+        }
+    }
+
+    /* Footer */
+
+    #footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "parte1"
+            "parte2"
+            "parte3"
+            "pie";
+        #footer__parte1 {
+            h2 {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            ul {
+                padding: 0px;
+            }
+        }
+        #footer__parte2 {
+            margin-bottom: 2rem;
+            .footerParte2 {
+                li {
+                    a {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            div {
+                .botonesVarios {
+                    width: 25vw;
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        .galeria__centro {
+            .galeria__subs {
+                .galeria__img {
+                    display: flex;
+                    flex-direction: column;
+                    width: 90vw;
+                    height: 1250px;
+                    img {
+                        width: 100%;
+                        height: 400px;
+                    }
+                }
+            }
+            .videos {
+                iframe {
+                    width: 90vw;
+                    margin: 0 auto;
+                    height: 270px;
+                }
+            }
+        }
+    }
+
+    /* MENU */
+
+    .table {
+        table {
+            width: 90vw;
+        }
+    }
+
+    /* CONTACTO */
+
+    .form-group {
+        width: 90vw; 
+    }
+
+}
