@@ -190,13 +190,19 @@ main .section .section__menu {
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
-    background-color: #f2e8cf; }
+    background-color: #f2e8cf;
+    box-shadow: 2px 2px 4px black; }
     .section__boton .boton a {
       color: #A22C29;
       text-decoration: none;
       font-size: 1.2rem;
       text-transform: uppercase;
       border-radius: 1rem; }
+  .section__boton .boton:hover {
+    background-color: #A22C29;
+    box-shadow: 4px 4px 6px black; }
+    .section__boton .boton:hover a {
+      color: #F2E8CF; }
 
 /* GALERIA */
 .galeria div p {
@@ -354,10 +360,23 @@ form {
 /* FAQ */
 main .preguntas {
   text-align: center;
-  padding: 0px; }
+  padding: 25px;
+  width: 65vw;
+  margin: 0 auto;
+  background-color: #F2E8CF;
+  text-align: justify; }
+
+main .fondo-pregunta {
+  color: black;
+  background-color: #F2E8CF; }
 
 main .fondo-respuesta {
-  background-color: #F2E8CF; }
+  background-color: #F2E8CF;
+  color: black;
+  text-indent: 2.5rem; }
+
+main div {
+  margin-bottom: 2rem; }
 
 :root {
   --facebook: #3b5999;
@@ -418,16 +437,32 @@ p {
   font-style: normal; }
 
 .botonesVarios {
-  background-color: #A7C957;
+  background-color: #333;
   width: 7.5vw;
   height: 5vh;
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
-  border-radius: 40px; }
+  border-radius: 40px;
+  box-shadow: 2px 2px 4px black; }
   .botonesVarios a {
     text-decoration: none;
-    color: black; }
+    color: white; }
+
+.botonesVarios:hover:nth-child(1) {
+  background-color: red; }
+  .botonesVarios:hover:nth-child(1) a {
+    color: white; }
+
+.botonesVarios:hover:nth-child(2) {
+  background-color: white; }
+  .botonesVarios:hover:nth-child(2) a {
+    color: #e65d2b; }
+
+.botonesVarios:hover:nth-child(3) {
+  background-color: white; }
+  .botonesVarios:hover:nth-child(3) a {
+    color: red; }
 
 @media screen and (max-width: 1023px) {
   /* INDEX */

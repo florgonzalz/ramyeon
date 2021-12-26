@@ -294,12 +294,20 @@ main{
         justify-content: center;
         border-radius: 1rem;
         background-color: $color-bg-principal;
+        box-shadow: 2px 2px 4px black;
         a{
             color: $color-principal;
             text-decoration: none;
             font-size: 1.2rem;
             text-transform: uppercase;
             border-radius: 1rem;
+        }
+    }
+    .boton:hover {
+        background-color: $color-principal;
+        box-shadow: 4px 4px 6px black;
+        a {
+            color: $color-secundario;
         }
     }
 }
@@ -521,10 +529,24 @@ form{
 main{
     .preguntas{
         text-align: center;
-        padding: 0px;
+        padding: 25px;
+        width: 65vw;
+        margin: 0 auto;
+        background-color: #F2E8CF;
+        text-align: justify;
+        
+    }
+    .fondo-pregunta {
+        color: black;
+        background-color: #F2E8CF;
     }
     .fondo-respuesta{
         background-color: #F2E8CF;
+        color: black;
+        text-indent: 2.5rem;
+    }
+    div {
+        margin-bottom: 2rem;
     }
 }
 
@@ -602,17 +624,39 @@ p{
 }
 
 .botonesVarios{
-    background-color: $color-bg-botones-footer;
+    background-color: $color-redes-cont-bg;
     width: 7.5vw;
     height: 5vh;
     text-transform: uppercase;
     font-weight: bolder;
     border: none;
-    border-radius: 40px; 
+    border-radius: 40px;
+    box-shadow: 2px 2px 4px black; 
         a{
             text-decoration: none; 
-            color: black;
+            color: white;
         }
+}
+
+.botonesVarios:hover:nth-child(1) {
+    background-color: red;
+    a {
+        color: white;
+    }
+}
+
+.botonesVarios:hover:nth-child(2) {
+    background-color: white;
+    a {
+        color: rgb(230, 93, 43);
+    }
+}
+
+.botonesVarios:hover:nth-child(3) {
+    background-color: white;
+    a {
+        color: red;
+    }
 }
 
 @import "./themes/media-768-1023";
