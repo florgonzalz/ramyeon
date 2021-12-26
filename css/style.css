@@ -111,24 +111,38 @@ html {
       background-color: #A22C29;
       color: #F2E8CF; }
 
-/* Carrousel */
+esto en verde se puede borrar
+no fue pregunta xD
 main #carouselExampleIndicators .carousel-inner .carousel-item img {
   width: 100%;
   object-fit: cover; }
 
+esto en verde se puede borrar
+no fue pregunta xD
 main #carouselExampleIndicators .carousel-inner .carousel-item div {
-  height: 70%;
+  height: 55%;
   width: 70vw;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; }
-  main #carouselExampleIndicators .carousel-inner .carousel-item div h3 {
-    font-size: 65px; }
-  main #carouselExampleIndicators .carousel-inner .carousel-item div p {
+  justify-content: flex-end; }
+  esto en verde se puede borrar
+no fue pregunta xD
+main #carouselExampleIndicators .carousel-inner .carousel-item div h3 {
+    font-size: 65px;
+    text-shadow: 4px 3px 5px black;
+    margin-bottom: 0; }
+  esto en verde se puede borrar
+no fue pregunta xD
+main #carouselExampleIndicators .carousel-inner .carousel-item div p:nth-child(1) {
+    margin-bottom: 1rem; }
+  esto en verde se puede borrar
+no fue pregunta xD
+main #carouselExampleIndicators .carousel-inner .carousel-item div p {
     color: white;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    text-shadow: 4px 3px 5px black; }
 
 /* Main */
 main .section .section__menu {
@@ -274,8 +288,8 @@ main .section .section__menu {
     padding: 0;
     margin-bottom: 0; }
     .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-body p {
-      text-transform: capitalize;
-      font-size: 1.12rem; }
+      text-transform: none;
+      font-size: 1rem; }
   .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-footer {
     margin-bottom: 0; }
     .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-footer .btn {

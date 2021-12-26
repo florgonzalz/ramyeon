@@ -188,6 +188,9 @@ html{
 //     }
 // }
 
+esto en verde se puede borrar
+no fue pregunta xD
+
 
 /* Carrousel */
 
@@ -200,19 +203,25 @@ main {
                     object-fit: cover;
                 }
                 div {
-                    height: 70%;
+                    height: 55%;
                     width: 70vw;
                     margin: auto;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: space-around;
+                    justify-content: flex-end;
                     h3 {
                         font-size: $font-size + 15px;
+                        text-shadow: 4px 3px 5px black;
+                        margin-bottom: 0;
+                    }
+                    p:nth-child(1) {
+                        margin-bottom: 1rem;
                     }
                     p {
                         color: $color-varios-w;
                         font-size: 1.5rem;
+                        text-shadow: 4px 3px 5px black;
                     }
                 }
             } 
@@ -401,8 +410,8 @@ main{
                         padding: 0;
                         margin-bottom: 0;
                         p {
-                            text-transform: capitalize;
-                            font-size: 1.12rem;
+                            text-transform: none;
+                            font-size: 1rem;
                         }
                     }
                     .modal-footer {
