@@ -11,6 +11,7 @@
     <meta name="description" content="Somos Ramyeon, el mejor restaurante de comida coreana de Caballito desde 1983. Conocé nuestra galería de fotos.">
     <script src="https://kit.fontawesome.com/12d77f052b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <title>Galería</title>
 </head>
@@ -18,17 +19,21 @@
 <body>
     <!--INICIO DE HEADER-->
     <header class="header">
-        <!--LOGO RESTAURANTE-->
         <div class="header__logo">
             <a href="../index.html">
                 <img src="../media/images/imagenesHome/logoC.png" alt="logoRestaurante">
-            </a>       
+            </a>
         </div>
-        <!--BARRA DE NAVEGACIÓN-->
+
+        <div class="header__menu">
+            <label for="menu"><img src="../media/images/iconos/menu.svg" alt="menu"></label>
+        </div>
+        <input type="checkbox" id="menu" class="header__input">
+        
         <nav class="header__nav">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li class="subMenu"><a href="./galeria.html">Galería</a>
+                <li class="subMenu"><a href="../pages/galeria.html">Galería</a>
                     <ul class="subMenuItems">
                         <li><a href="../pages/galeria.html#entradas">Entradas</a></li>
                         <li><a href="../pages/galeria.html#carnes">Carnes</a></li>
@@ -36,54 +41,572 @@
                         <li><a href="../pages/galeria.html#pastas">Pastas</a></li>
                     </ul>
                 </li>
-                <li><a href="./menu.html">Menú</a></li>
-                <li><a href="./reservas.html">Reservas</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="../pages/menu.html">Menú</a></li>
+                <li><a href="../pages/reservas.html">Reservas</a></li>
+                <li><a href="../pages/contacto.html">Conctacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
+    <!-- <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid header__logo">
+                <a href="../index.html">
+                    <img src="../media/images/imagenesHome/logoC.png" alt="logoRestaurante">
+                </a>
+    
+               <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse header__nav" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galeria</a>
+                    <ul class="dropdown-menu subMenuItems" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="../pages/galeria.html#entradas">Entradas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../pages/galeria.html#carnes">Carnes</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../pages/galeria.html#sopas">Sopas</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="../pages/galeria.html#pastas">Pastas</a></li>
+                      </ul>
+                  </li>
+    
+                  <li class="nav-item dropdown">
+                    <a class="nav-link active" href="./menu.html">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./reservas.html" tabindex="-1" aria-disabled="true">Reservas</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./contacto.html" tabindex="-1" aria-disabled="true">Contacto</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> 
+              </div>
+            </div>
+          </nav>
+    </header> -->
+
     <!--INICIO DE PAGINA GALERIA-->
     <main class="galeria">
         <div>
             <h1 class="introInicio">GALERÍA</h1>
             <p class="comentariosCentro">Te presentamos nuestros platos</p>
         </div>
+
         <section class="galeria__centro">
             <div class="galeria__subs">
                 <h2 id="entradas">Entradas</h2>
                 <div class="galeria__img">
-                    <img src="../media/images/imagenesGaleria/seccionEntradas/gunMandu.jpg" alt="gunMandu">
-                    <img src="../media/images/imagenesGaleria/seccionEntradas/nokduBindaetteok.jpg" alt="nokduBindaetteok">
-                    <img src="../media/images/imagenesGaleria/seccionEntradas/kimchiMandu.jpg" alt="kimchiMandu">
+                    <a data-bs-toggle="modal" data-bs-target="#gunMandu">
+                        <img src="../media/images/imagenesGaleria/seccionEntradas/gunMandu.jpg" alt="gunMandu">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#nokduBindaetteok">
+                        <img src="../media/images/imagenesGaleria/seccionEntradas/nokduBindaetteok.jpg" alt="nokduBindaetteok">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#kimchiMandu">
+                        <img src="../media/images/imagenesGaleria/seccionEntradas/kimchiMandu.jpg" alt="kimchiMandu">
+                    </a>
                 </div>
             </div>   
+
             <div class="galeria__subs">
                 <h2 id="carnes">Carnes</h2>
                 <div class="galeria__img">
-                    <img src="../media/images/imagenesGaleria/seccionCarnes/bulgogi.jpg" alt="bulgogi">
-                    <img src="../media/images/imagenesGaleria/seccionCarnes/samgyupsal.jpg" alt="samgyupsal">
-                    <img src="../media/images/imagenesGaleria/seccionCarnes/galbi.jpg" alt="galbi">
+                    <a data-bs-toggle="modal" data-bs-target="#bulgogi">
+                        <img src="../media/images/imagenesGaleria/seccionCarnes/bulgogi.jpg" alt="bulgogi">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#samgyupsal">
+                        <img src="../media/images/imagenesGaleria/seccionCarnes/samgyupsal.jpg" alt="samgyupsal">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#galbi">
+                        <img src="../media/images/imagenesGaleria/seccionCarnes/galbi.jpg" alt="galbi">
+                    </a>
                 </div>
             </div> 
+
             <div class="galeria__subs">
                 <h2 id="sopas">Sopas</h2>
                 <div class="galeria__img">
-                    <img src="../media/images/imagenesGaleria/seccionSopas/doenjanJjigae.jpg" alt="doenjanJjigae">
-                    <img src="../media/images/imagenesGaleria/seccionSopas/sundubuJjigae.jpg" alt="sundubuJjigae">
-                    <img src="../media/images/imagenesGaleria/seccionSopas/kimchiJjigae.jpg" alt="kimchiJjigae">
+                    <a data-bs-toggle="modal" data-bs-target="#doenjanJjigae">
+                        <img src="../media/images/imagenesGaleria/seccionSopas/doenjanJjigae.jpg" alt="doenjanJjigae">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#sundubuJjigae">
+                        <img src="../media/images/imagenesGaleria/seccionSopas/sundubuJjigae.jpg" alt="sundubuJjigae">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#kimchiJjigae">
+                        <img src="../media/images/imagenesGaleria/seccionSopas/kimchiJjigae.jpg" alt="kimchiJjigae">
+                    </a>
                 </div>
             </div>   
+
             <div class="galeria__subs">
                 <h2 id="pastas">Pastas</h2>
                 <div class="galeria__img">
-                    <img src="../media/images/imagenesGaleria/seccionPastas/janchiGuksu.jpg" alt="janchiGuksu">
-                    <img src="../media/images/imagenesGaleria/seccionPastas/japchae.jpg" alt="japchae">
-                    <img src="../media/images/imagenesGaleria/seccionPastas/tteokbokki.jpg" alt="tteokbokki">
+                    <a data-bs-toggle="modal" data-bs-target="#janchiGuksu">
+                        <img src="../media/images/imagenesGaleria/seccionPastas/janchiGuksu.jpg" alt="janchiGuksu">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#japchae">
+                        <img src="../media/images/imagenesGaleria/seccionPastas/japchae.jpg" alt="japchae">
+                    </a>
+                    <a data-bs-toggle="modal" data-bs-target="#tteokbokki">
+                        <img src="../media/images/imagenesGaleria/seccionPastas/tteokbokki.jpg" alt="tteokbokki">
+                    </a>
                 </div>
             </div>
+
+            <div class="modal fade" id="gunMandu" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El gunMandu blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="nokduBindaetteok" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El nokduBindaetteok blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="kimchiMandu" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El kimchiMandu blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="bulgogi" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El bulgogi blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="samgyupsal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El samgyupsal blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="galbi" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El galbi blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="doenjanJjigae" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El doenjanJjigae blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="sundubuJjigae" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El sundubuJjigae blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="kimchiJjigae" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El kimchiJjigae blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="janchiGuksu" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El janchiGuksu blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="japchae" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El japchae blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="tteokbokki" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel">Descripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>El tteokbokki blabla bla</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Precios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToggleLabel2">Lista de precios</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Plato: $1200</p>
+                            <p>1/2 porción: $650</p>
+                            <p>Comen 2: $1000</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
+            
+
+
             <div>
                 <p>Mirá más de nuestra cocina</p>
             </div>
+
             <div class="videos">
                 <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/wc6da8e4Q-Q"
@@ -92,6 +615,7 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+
                 <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/gQyVwzSiXBs"
                         title="YouTube video player" frameborder="0"
@@ -99,6 +623,7 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+
                 <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/zECZXmDmHR0"
                         title="YouTube video player" frameborder="0"

@@ -1,6 +1,11 @@
+
+
+
 @media screen and (max-width:1023px){
 
-    /* Index */
+    /* INDEX */
+
+    /* Main */
 
    main {
        .section {
@@ -16,10 +21,14 @@
 
    /* Footer */
 
-   .botonesVarios {
-       width: 8.5vw;
-   }
-
-
+    #footer {
+        #footer__parte2 {
+            div {
+                .botonesVarios {
+                    width: 8.5vw;
+                }
+            }
+        }
+    }
 
 }

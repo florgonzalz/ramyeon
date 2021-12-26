@@ -18,13 +18,17 @@
 <body>
     <!--INICIO DE HEADER-->
     <header class="header">
-        <!--LOGO RESTAURANTE -->
         <div class="header__logo">
             <a href="./index.html">
                 <img src="./media/images/imagenesHome/logoC.png" alt="logoRestaurante">
             </a>
         </div>
-        <!--BARRA DE NAVEGACIÓN-->
+
+        <div class="header__menu">
+            <label for="menu"><img src="./media/images/iconos/menu.svg" alt="menu"></label>
+        </div>
+        <input type="checkbox" id="menu" class="header__input">
+        
         <nav class="header__nav">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -41,18 +45,78 @@
                 <li><a href="./pages/contacto.html">Conctacto</a></li>
             </ul>
         </nav>
-    </header>
+    </header> 
+
+<!-- <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid header__logo">
+            <a href="./index.html">
+                <img src="./media/images/imagenesHome/logoC.png" alt="logoRestaurante">
+            </a>
+
+          <!-- <a class="navbar-brand" href="#">Navbar</a> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse header__nav" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Galeria</a>
+                <ul class="dropdown-menu subMenuItems" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="./pages/galeria.html#entradas">Entradas</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./pages/galeria.html#carnes">Carnes</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./pages/galeria.html#sopas">Sopas</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="./pages/galeria.html#pastas">Pastas</a></li>
+                  </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="./pages/menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./pages/reservas.html" tabindex="-1" aria-disabled="true">Reservas</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="./pages/contacto.html" tabindex="-1" aria-disabled="true">Contacto</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> 
+          </div>
+        </div>
+      </nav>
+</header> -->
+
     <!--INICIO DE PAGINA DE INICIO-->
     <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
             </div>
+
             <div class="carousel-inner" data-bs-interval="10000">
               <div class="carousel-item active">
                 <img src="./media/images/carrousel/foto0.jpg" class="d-block w-100" alt="foto0" width="1100" height="550">
@@ -61,6 +125,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quia?</p>
                 </div>
               </div>
+
               <div class="carousel-item" data-bs-interval="4000">
                 <img src="./media/images/carrousel/foto1.jpg" class="d-block w-100" alt="foto1" width="1100" height="550">
                 <div class="carousel-caption">
@@ -68,6 +133,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quia?</p>
                 </div>
               </div>
+
               <div class="carousel-item" data-bs-interval="4000">
                 <img src="./media/images/carrousel/foto2.jpg" class="d-block w-100" alt="foto2" width="1100" height="550">
                 <div class="carousel-caption">
@@ -75,6 +141,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quia?</p>
                 </div>
               </div>
+
               <div class="carousel-item" data-bs-interval="4000">
                 <img src="./media/images/carrousel/foto3.jpg" class="d-block w-100" alt="foto3" width="1100" height="550">
                 <div class="carousel-caption">
@@ -82,6 +149,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quia?</p>
                 </div>
               </div>
+
               <div class="carousel-item" data-bs-interval="4000">
                 <img src="./media/images/carrousel/foto4.jpg" class="d-block w-100" alt="foto4" width="1100" height="550">
                 <div class="carousel-caption">
@@ -89,6 +157,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quia?</p>
                 </div>
               </div>
+
               <div class="carousel-item">
                 <img src="./media/images/carrousel/foto5.jpg" class="d-block w-100" alt="foto5" width="1100" height="550">
                 <div class="carousel-caption">
@@ -97,6 +166,7 @@
                 </div>
               </div>
             </div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -106,6 +176,7 @@
               <span class="visually-hidden">Next</span>
             </button>
         </div>
+
         <section class="section">
             <h2 class="introInicio">Conocenos</h2>
             <div class="section__menu">
@@ -214,4 +285,3 @@
 
 </html>
 
-</html>

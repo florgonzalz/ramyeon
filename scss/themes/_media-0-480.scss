@@ -1,0 +1,203 @@
+
+
+@media screen and (max-width:480px) {
+
+    /* HEADER */
+
+    // .header {
+    //     .header__logo {
+    //         width: 14vw;
+    //         display: none;
+    //         // img {
+    //         //     width: 100%;
+    //         // }
+    //     }
+
+    //     .header__nav {
+    //         width: 100vw;
+    //         > ul {
+    //             padding: 0;
+    //             justify-content: space-around;
+    //             > li {
+    //                 width: 15vw;
+    //             }
+    //         }
+    //     }
+    // }
+
+
+
+    /* Carrousel */
+
+    main {
+        #carouselExampleIndicators {
+            .carousel-inner {
+                .carousel-item {
+                    div {
+                        h3 {
+                            font-size: $font-size;
+                            text-shadow: 2px 2px 2px black;
+                        }
+                        p {
+                            color: $color-varios-w;
+                            font-size: 1.25rem;
+                            text-shadow: 2px 2px 2px black;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+
+    /* Main */
+
+    main {
+        .section {
+            .section__menu {
+                width: 90vw;
+                .section__grilla {
+                    flex-direction: column;
+                    width: 100%;
+                    .section__img {
+                        width: 70vw;
+                        height: 300px;
+                        margin: 0 auto;
+                    }
+                    .section__haches {
+                        height: 300px;
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .section__boton {
+            .boton {
+                width: 30vw;
+            }
+        }
+        div {
+            audio {
+                display: flex;
+                justify-content: center;
+                margin: 2rem auto;
+            }
+        }
+    }
+
+    /* Footer */
+
+    #footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "parte1"
+            "parte2"
+            "parte3"
+            "pie";
+        #footer__parte1 {
+            h2 {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            ul {
+                padding: 0px;
+            }
+        }
+        #footer__parte2 {
+            margin-bottom: 2rem;
+            .footerParte2 {
+                li {
+                    a {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            div {
+                .botonesVarios {
+                    width: 25vw;
+                    a {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+        #footer__parte3 {
+            iframe {
+                width: 350px;
+            }
+        }
+    }
+
+    /* GALERIA */
+
+    .galeria {
+        .galeria__centro {
+            .galeria__subs {
+                .galeria__img {
+                    display: grid;
+                    grid-template-columns: 100%;
+                    grid-template-rows: repeat(3, 400px);
+                    height: 1200px;
+                    a {
+                        width: 90%;
+                        height: 90%;
+                        margin: 0 auto;
+                    }
+                    a:nth-child(1) {
+                        grid-row: 1/2;
+                    }
+                    a:nth-child(2) {
+                        grid-row: 2/3;
+                    }
+                    a:nth-child(3) {
+                        grid-row: 3/4;
+                    }
+                    img {
+                        width: 100%;
+                        height: 400px;
+                    }
+                }
+            }
+            .videos {
+                iframe {
+                    width: 90vw;
+                    margin: 0 auto;
+                    height: 270px;
+                }
+            }
+            .modal {
+                margin: 0 auto;
+                .modal-dialog {
+                    width: 85%;
+                    margin: 0 auto;
+                    .modal-content {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    /* MENU */
+
+    .table {
+        table {
+            width: 90%;
+        }
+    }
+
+    /* RESERVAS */
+
+    .section__boton {
+        width: 50vw;
+    }
+
+    /* CONTACTO */
+
+    .form-group {
+        width: 90vw; 
+    }
+
+}
