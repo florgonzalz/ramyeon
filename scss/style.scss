@@ -388,6 +388,40 @@ main{
                 }
             }
         }
+        .modal {
+            .modal-dialog {
+                .modal-content {
+                    .modal-header {
+                        margin-bottom: 0;
+                        h5 {
+                            text-transform: uppercase;
+                        }
+                    }
+                    .modal-body {
+                        padding: 0;
+                        margin-bottom: 0;
+                        p {
+                            text-transform: capitalize;
+                            font-size: 1.12rem;
+                        }
+                    }
+                    .modal-footer {
+                        margin-bottom: 0;
+                        .btn {
+                            background-color: $color-bg-secundario;
+                            border: $color-bg-secundario;
+                            box-shadow: 2px 2px 4px black;
+                        }
+                        .btn:hover {
+                            background-color: $color-bg-principal;
+                            border: $color-bg-principal;
+                            color: $color-bg-secundario;
+                            box-shadow: 3px 3px 6px black;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

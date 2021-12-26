@@ -266,6 +266,27 @@ main .section .section__menu {
             color: brown;
             margin-bottom: 200px;
             transition: all 500ms ease-out; }
+  .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-header {
+    margin-bottom: 0; }
+    .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-header h5 {
+      text-transform: uppercase; }
+  .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-body {
+    padding: 0;
+    margin-bottom: 0; }
+    .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-body p {
+      text-transform: capitalize;
+      font-size: 1.12rem; }
+  .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-footer {
+    margin-bottom: 0; }
+    .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-footer .btn {
+      background-color: #A22C29;
+      border: #A22C29;
+      box-shadow: 2px 2px 4px black; }
+    .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-footer .btn:hover {
+      background-color: #f2e8cf;
+      border: #f2e8cf;
+      color: #A22C29;
+      box-shadow: 3px 3px 6px black; }
 
 @keyframes nombre {
   0% {
