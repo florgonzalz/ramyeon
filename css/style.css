@@ -111,14 +111,11 @@ html {
       background-color: #A22C29;
       color: #F2E8CF; }
 
-esto en verde se puede borrar
-no fue pregunta xD
+/* Carrousel */
 main #carouselExampleIndicators .carousel-inner .carousel-item img {
   width: 100%;
   object-fit: cover; }
 
-esto en verde se puede borrar
-no fue pregunta xD
 main #carouselExampleIndicators .carousel-inner .carousel-item div {
   height: 55%;
   width: 70vw;
@@ -127,22 +124,16 @@ main #carouselExampleIndicators .carousel-inner .carousel-item div {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end; }
-  esto en verde se puede borrar
-no fue pregunta xD
-main #carouselExampleIndicators .carousel-inner .carousel-item div h3 {
+  main #carouselExampleIndicators .carousel-inner .carousel-item div .tituloCarrousel {
     font-size: 65px;
-    text-shadow: 4px 3px 5px black;
+    text-shadow: 2px 2px 2px black;
     margin-bottom: 0; }
-  esto en verde se puede borrar
-no fue pregunta xD
-main #carouselExampleIndicators .carousel-inner .carousel-item div p:nth-child(1) {
+  main #carouselExampleIndicators .carousel-inner .carousel-item div .pCarrousel:nth-child(1) {
     margin-bottom: 1rem; }
-  esto en verde se puede borrar
-no fue pregunta xD
-main #carouselExampleIndicators .carousel-inner .carousel-item div p {
+  main #carouselExampleIndicators .carousel-inner .carousel-item div .pCarrousel {
     color: white;
     font-size: 1.5rem;
-    text-shadow: 4px 3px 5px black; }
+    text-shadow: 2px 2px 2px black; }
 
 /* Main */
 main .section .section__menu {
@@ -175,6 +166,8 @@ main .section .section__menu {
       justify-content: center;
       width: 50%;
       padding: 1rem; }
+      main .section .section__menu .section__grilla .section__haches h3 {
+        color: #386641; }
 
 .introInicio {
   text-align: center;
@@ -242,44 +235,68 @@ main .section .section__menu {
   .galeria .galeria__centro .galeria__subs {
     font-size: 32px;
     color: #386641;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 0; }
     .galeria .galeria__centro .galeria__subs h2 {
-      margin: 2rem 0rem; }
+      margin: 2rem 0rem;
+      text-shadow: 1px 1px 2px black; }
     .galeria .galeria__centro .galeria__subs .galeria__img {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
       height: 400px; }
-      .galeria .galeria__centro .galeria__subs .galeria__img a {
-        width: 90%;
-        height: 100%; }
-        .galeria .galeria__centro .galeria__subs .galeria__img a img {
-          width: 90%;
+      .galeria .galeria__centro .galeria__subs .galeria__img .contenedor {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin-bottom: 0;
+        margin: 0rem 1rem; }
+        .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure {
+          position: relative;
           height: 100%;
-          border-radius: 10px;
-          margin: 0rem 1rem;
-          object-fit: cover;
-          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); }
-        .galeria .galeria__centro .galeria__subs .galeria__img a img:hover {
-          animation: nombre 600ms both;
-          filter: blur(2px); }
-          .galeria .galeria__centro .galeria__subs .galeria__img a img:hover div {
-            opacity: 1;
-            visibility: visible; }
-        .galeria .galeria__centro .galeria__subs .galeria__img a div {
-          position: absolute;
-          top: 0;
           width: 100%;
-          height: 100%;
-          transition: all 500ms ease-out;
-          opacity: 0;
-          visibility: hidden;
-          text-align: center; }
-          .galeria .galeria__centro .galeria__subs .galeria__img a div p {
-            color: brown;
-            margin-bottom: 200px;
-            transition: all 500ms ease-out; }
+          overflow: hidden;
+          border-radius: 6px;
+          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+          cursor: pointer; }
+          .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure a {
+            width: 90%;
+            height: 100%; }
+            .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure a img {
+              width: 100%;
+              height: 100%;
+              transition: all 500ms ease-out;
+              object-fit: cover; }
+            .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure a .capa {
+              position: absolute;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(241, 235, 235, 0.2);
+              opacity: 0;
+              visibility: hidden;
+              text-align: center;
+              transform: translateY(-100%); }
+              .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure a .capa h3 {
+                color: #fff;
+                transition: all 500ms ease-out;
+                text-shadow: 2px 2px 4px black;
+                font-size: 1.5rem;
+                border: 2px solid #fff;
+                display: block;
+                width: 40%;
+                margin: 0 auto; }
+        .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure:hover a > .capa {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0%); }
+          .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure:hover a > .capa h3 {
+            margin-top: 190px; }
+        .galeria .galeria__centro .galeria__subs .galeria__img .contenedor figure:hover a > img {
+          transform: scale(1.3); }
   .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-header {
     margin-bottom: 0; }
     .galeria .galeria__centro .modal .modal-dialog .modal-content .modal-header h5 {
@@ -457,7 +474,8 @@ main div {
 .redes-container ul li .pinterest:hover {
   background: var(--pinterest); }
 
-p {
+.parrafosDerecha,
+.parrafoIzq {
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   color: black;
@@ -585,7 +603,6 @@ p {
     width: 70vw; } }
 
 @media screen and (max-width: 480px) {
-  /* HEADER */
   /* Carrousel */
   main #carouselExampleIndicators .carousel-inner .carousel-item div h3 {
     font-size: 50px;
@@ -641,19 +658,21 @@ p {
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, 400px);
     height: 1200px; }
-    .galeria .galeria__centro .galeria__subs .galeria__img a {
-      width: 90%;
-      height: 90%;
-      margin: 0 auto; }
-    .galeria .galeria__centro .galeria__subs .galeria__img a:nth-child(1) {
-      grid-row: 1/2; }
-    .galeria .galeria__centro .galeria__subs .galeria__img a:nth-child(2) {
-      grid-row: 2/3; }
-    .galeria .galeria__centro .galeria__subs .galeria__img a:nth-child(3) {
-      grid-row: 3/4; }
-    .galeria .galeria__centro .galeria__subs .galeria__img img {
-      width: 100%;
-      height: 400px; }
+    .galeria .galeria__centro .galeria__subs .galeria__img figure {
+      margin: 2rem auto; }
+      .galeria .galeria__centro .galeria__subs .galeria__img figure a {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto; }
+      .galeria .galeria__centro .galeria__subs .galeria__img figure a:nth-child(1) {
+        grid-row: 1/2; }
+      .galeria .galeria__centro .galeria__subs .galeria__img figure a:nth-child(2) {
+        grid-row: 2/3; }
+      .galeria .galeria__centro .galeria__subs .galeria__img figure a:nth-child(3) {
+        grid-row: 3/4; }
+      .galeria .galeria__centro .galeria__subs .galeria__img figure img {
+        width: 100%;
+        height: 400px; }
   .galeria .galeria__centro .videos iframe {
     width: 90vw;
     margin: 0 auto;
